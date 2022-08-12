@@ -1,0 +1,6 @@
+.countries {
+    display: grid;
+    /* grid-template-columns: 272px 272px 272px 272px; */
+    grid-template: repeat(auto-fit, minmax(176px, 1fr)) / repeat(auto-fit, minmax(272px, 1fr));
+    gap: 72px;
+}

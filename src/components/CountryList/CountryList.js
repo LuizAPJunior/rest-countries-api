@@ -1,18 +1,28 @@
 import React from 'react';
 import './CountryList.css';
-import PropTypes from 'prop-types';
 import Country from '../Country/Country';
+import { Link } from 'react-router-dom';
+import useCountries from '../../hooks/useCountries';
 
-const CountryList = ({ countries }) => {
+const CountryList = () => {
+  const countries = useCountries();
   return (
     <div className="countries">
       {countries
-        ? countries.map((country) => <Country key={country.name.common} country={country} />)
+        ? countries.map((country) => {
+            return (
+              <Link
+                className="countries-link"
+                key={country.name.common}
+                to={`/${country.name.common}`}
+              >
+                <Country country={country} />;
+              </Link>
+            );
+          })
         : ''}
     </div>
   );
 };
-
-CountryList.propTypes = { countries: PropTypes.array.isRequired };
 
 export default CountryList;

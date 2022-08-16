@@ -1,6 +1,18 @@
 .countries {
     display: grid;
-    /* grid-template-columns: 272px 272px 272px 272px; */
     grid-template: repeat(auto-fit, minmax(176px, 1fr)) / repeat(auto-fit, minmax(272px, 1fr));
     gap: 72px;
+    justify-items: center;
+    font-size: 14px;
+    padding: 3rem 4rem;
+}
+
+
+.countries-link {
+    max-width: min-content;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

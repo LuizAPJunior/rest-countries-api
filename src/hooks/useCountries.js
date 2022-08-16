@@ -8,7 +8,6 @@ const useCountries = () => {
   useEffect(() => {
     countriesService.getAll().then((response) => setCountries(response));
   }, []);
-
   return countries;
 };
 

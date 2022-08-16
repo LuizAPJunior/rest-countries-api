@@ -91,14 +91,19 @@ select {
 
 body {
     font-family: var(--ff-sans);
+    font-weight: 300;
     background: hsl(var(--v-light-gray));
-}
-
-
-main {
-    padding: 3rem 4rem;
 }
 
 .App {
     max-width: 100%;
+}
+
+button {
+    display: inline-flex;
+    cursor: pointer;
+    padding: .5em 2em;
+    border: none;
+    background: hsl(var(--white));
+    box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
 }

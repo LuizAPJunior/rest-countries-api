@@ -1,21 +1,19 @@
 import React from 'react';
-//import Country from './components/Country/Country';
+import { Routes, Route } from 'react-router-dom';
 import CountryList from './components/CountryList/CountryList';
 import Header from './components/Header/Header';
-import useCountries from './hooks/useCountries';
+import CountryDetail from './components/CountryDetail/CountryDetail';
 
 const App = () => {
-  const countries = useCountries();
-
-  console.log(countries[0]);
-
   return (
     <div className="App">
       <Header />
       <main>
-        <CountryList countries={countries} />
+        <Routes>
+          <Route path="/" element={<CountryList />} />
+          <Route path="/:id" element={<CountryDetail />} />
+        </Routes>
       </main>
-      {/* {countries[0] ? <Country country={countries[0]} /> : ''} */}
     </div>
   );
 };

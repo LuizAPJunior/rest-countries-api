@@ -13,7 +13,7 @@ const Country = ({ country }) => {
       <div className="country-info">
         <h3 className="country-name">{country.name.common}</h3>
         <div>
-          <span>Population:</span> {country.population}
+          <span>Population:</span> {country.population.toLocaleString()}
         </div>
         <div>
           <span>Region: </span> {country.region}

@@ -5,7 +5,6 @@
     "scripts": {
         "build": "webpack --mode=production",
         "start": "webpack serve --mode=development",
-        "server": "json-server --port 3001 db.json",
         "lint": "eslint ."
     },
     "license": "MIT",

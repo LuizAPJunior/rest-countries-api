@@ -1,0 +1,20 @@
+input[type="search"] {
+    font-size: 14px;
+    background: url('../../assets/icons/search.svg') no-repeat scroll 2rem 16px;
+    background-color: hsl(var(--white));
+    border: none;
+    width: 480px;
+    height: 56px;
+    padding-left: 72px;
+    box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
+    border-radius: 3px;
+}
+
+
+input::placeholder {
+    color: hsl(var(--dark-gray));
+}
+
+input:focus {
+    outline: 1px solid hsl(var(--dark-gray));
+}

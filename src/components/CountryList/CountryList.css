@@ -1,17 +1,16 @@
 .countries-list {
     display: grid;
     grid-template: repeat(auto-fit, minmax(176px, 1fr)) / repeat(auto-fit, minmax(272px, 1fr));
-    gap: 72px;
+    gap: 64px;
     justify-items: center;
     font-size: 14px;
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
 }
 
 .countries-filter {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
 }
 
 .countries-link {

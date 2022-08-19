@@ -6,7 +6,6 @@ const useFilter = (countries, region, countrySearched) => {
   const countriesToShow = countrySearched
     ? countriesByRegion.filter((country) => country.name.common.match(regexSearch))
     : countriesByRegion;
-  console.log(countriesToShow);
   return countriesToShow;
 };
 

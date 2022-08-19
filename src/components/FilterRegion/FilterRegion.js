@@ -1,27 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Select from 'react-select';
+import FilterRegionStyle from './FilterRegionStyle';
 
-const FilterRegion = ({ setRegion, region }) => {
+const options = [
+  { value: '', label: 'Filter By Region' },
+  { value: 'Africa', label: 'Africa' },
+  { value: 'Americas', label: 'Americas' },
+  { value: 'Asia', label: 'Asia' },
+  { value: 'Europe', label: 'Europe' },
+  { value: 'Oceania', label: 'Oceania' },
+];
+
+const FilterRegion = ({ setRegion }) => {
+  const handleChange = (selectedOption) => {
+    setRegion(selectedOption.value);
+  };
+
   return (
-    <select
-      name="regions"
-      id="regions-select"
-      value={region}
-      onChange={(event) => setRegion(event.target.value)}
-    >
-      <option value="">Filter by Region</option>
-      <option value="Africa">Africa</option>
-      <option value="Americas">Americas</option>
-      <option value="Asia">Asia</option>
-      <option value="Europe">Europe</option>
-      <option value="Oceania">Oceania</option>
-    </select>
+    <Select
+      styles={FilterRegionStyle}
+      defaultValue={options[0]}
+      onChange={handleChange}
+      options={options}
+    />
   );
 };
 
 FilterRegion.propTypes = {
   setRegion: PropTypes.func.isRequired,
-  region: PropTypes.string.isRequired,
 };
 
 export default FilterRegion;

@@ -17,7 +17,7 @@ const CountryList = () => {
     <div className="countries">
       <div className="countries-filter">
         <FilterCountry setSearchCountry={setSearchCountry} />
-        <FilterRegion setRegion={setRegion} region={region} />
+        <FilterRegion setRegion={setRegion} />
       </div>
       <div className="countries-list">
         {countries

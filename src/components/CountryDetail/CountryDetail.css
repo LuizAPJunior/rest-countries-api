@@ -4,7 +4,12 @@
 }
 
 .back-button {
+    background: url('../../assets/icons/arrow_back.svg') no-repeat scroll 2rem 10px;
+    background-color: hsl(var(--white));
     margin-bottom: 4rem;
+    padding-left: 3.5em;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .09);
+    border-radius: 3px;
 }
 
 .countryDetail-flag {
@@ -42,7 +47,6 @@
 
 .borderCountries-container {
     display: flex;
-    /* align-items: center; */
     gap: 8px;
 
 }
@@ -58,8 +62,6 @@
 .borderCountry-button {
     padding: .5em 1em;
     white-space: nowrap;
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
 }
 
 .countries-link {

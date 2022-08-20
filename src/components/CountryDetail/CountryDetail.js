@@ -8,7 +8,6 @@ const CountryDetail = () => {
   const name = useParams().id;
   const countries = useCountries();
   const country = countries ? countries.find((country) => country.name.common === name) : '';
-  console.log(country);
   const navigate = useNavigate();
 
   const borderCountry = (borderCountryInitials) => {
@@ -28,11 +27,9 @@ const CountryDetail = () => {
             Back
           </button>
           <div className="countryDetail-container">
-            <img
-              className="countryDetail-flag"
-              src={country.flags.png}
-              alt={`flag of ${country.name.common}`}
-            />
+            <div className="countryDetail-flag">
+              <img src={country.flags.png} alt={`flag of ${country.name.common}`} />
+            </div>
             <div className="countryDetail-info">
               <h1 className="country-name">{country.name.common}</h1>
               <div className="countryDetail-info-col">

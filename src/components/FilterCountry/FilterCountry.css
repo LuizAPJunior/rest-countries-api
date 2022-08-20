@@ -3,11 +3,30 @@ input[type="search"] {
     background: url('../../assets/icons/search.svg') no-repeat scroll 2rem 16px;
     background-color: hsl(var(--white));
     border: none;
-    width: 480px;
+    flex: 1;
+    max-width: 480px;
     height: 56px;
     padding-left: 72px;
     box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
     border-radius: 3px;
+}
+
+
+@media (max-width: 375px) {
+    input[type="search"] {
+        font-size: 14px;
+        background: url('../../assets/icons/search.svg') no-repeat scroll 2rem 16px;
+        background-color: hsl(var(--white));
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        height: 56px;
+        padding-left: 72px;
+        box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
+        border-radius: 3px;
+        margin-bottom: 5rem;
+    }
+
 }
 
 

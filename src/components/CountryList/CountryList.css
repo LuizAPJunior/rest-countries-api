@@ -1,15 +1,19 @@
 .countries-list {
     display: grid;
-    grid-template: repeat(auto-fit, minmax(176px, 1fr)) / repeat(auto-fit, minmax(272px, 1fr));
+    grid-template: repeat(auto-fill, minmax(176px, 1fr)) / repeat(auto-fill, minmax(272px, 1fr));
     gap: 64px;
     justify-items: center;
     font-size: 14px;
     padding: 3rem 5rem;
 }
 
+
 .countries-filter {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 80px;
     padding: 3rem 5rem;
 }
 
@@ -20,4 +24,19 @@
 a {
     text-decoration: none;
     color: black;
+}
+
+@media(max-width: 375px) {
+    .countries-list {
+        display: grid;
+        gap: 80px;
+        justify-items: center;
+        font-size: 14px;
+        padding: 3rem 2rem 7rem 2rem;
+    }
+
+    .countries-filter {
+        display: block;
+        padding-inline: 2rem;
+    }
 }

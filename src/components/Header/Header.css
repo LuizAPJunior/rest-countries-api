@@ -3,10 +3,28 @@
     align-items: center;
     font-size: 1.5rem;
     font-weight: 800;
-    padding: 1.4rem 5rem;
+    padding: 2rem 2rem;
     background: hsl(var(--white));
     box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
 }
+
+@media (min-width: 376px) {
+    .header {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        padding: 1.4rem 5rem;
+        background: hsl(var(--white));
+        box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
+    }
+
+    .logo {
+        white-space: nowrap;
+    }
+
+}
+
 
 .countries-link {
     max-width: min-content;

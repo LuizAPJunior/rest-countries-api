@@ -46,6 +46,7 @@ const FilterRegionStyle = {
   menu: (styles, { isSelected }) => {
     return {
       ...styles,
+      maxWidth: 200,
       border: isSelected ? '0 !important' : '0',
       outline: isSelected ? '0 !important' : '0 !important',
       boxShadow: '0 .5px 3px 1px rgba(0, 0, 0, .09)',

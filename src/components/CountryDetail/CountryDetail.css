@@ -13,48 +13,58 @@
 }
 
 .countryDetail-flag {
-    width: 100%;
-    max-width: 35rem;
-    min-height: 25rem;
-    max-height: 25rem;
+    width: 560px;
+    max-height: 402px;
+    white-space: nowrap;
+}
+
+.countryDetail-flag img {
+    width: 560px;
+    object-fit: cover;
 }
 
 
 .countryDetail-container {
     display: flex;
     gap: 7rem;
+    flex-wrap: wrap;
 }
 
 .countryDetail-info {
-    padding-block: 3rem;
-}
-
-.countryDetail-info-item {
-    flex: 1;
+    padding-block: 2rem;
 }
 
 
-.countryDetail-info>div>p {
-    margin-bottom: 1rem;
+.countryDetail-info div p {
+    margin-bottom: .5rem;
+}
+
+.countryDetail-info div span {
+    white-space: nowrap;
 }
 
 .countryDetail-info-col {
     display: flex;
+    justify-content: space-between;
     gap: 8rem;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
 }
 
 
 .borderCountries-container {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
-
+    white-space: nowrap;
 }
 
 .borderCountries-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    max-width: 464px;
     gap: 8px;
 
 }
@@ -71,4 +81,49 @@
 
 span {
     font-weight: 600;
+}
+
+@media(max-width: 375px) {
+    .countryDetail {
+        padding: 2.5rem 28px 7rem 28px;
+    }
+
+
+
+    .countryDetail-flag {
+        height: 228px;
+    }
+
+    .countryDetail-flag img {
+        width: 320px;
+
+        object-fit: cover;
+    }
+
+
+    .countryDetail-flag {
+
+        max-width: 100%;
+        max-height: 228px;
+    }
+
+    .countryDetail-container {
+        display: block;
+    }
+
+    .countryDetail-info-col {
+        display: block;
+    }
+
+    .countryDetail-info-item {
+        margin-bottom: 3rem;
+    }
+
+    .countryDetail-info-col p {
+        margin-bottom: 1rem;
+    }
+
+    .borderCountries-container {
+        display: block;
+    }
 }

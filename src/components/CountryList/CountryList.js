@@ -28,7 +28,7 @@ const CountryList = () => {
                   key={country.name.common}
                   to={`/${country.name.common}`}
                 >
-                  <Country country={country} />;
+                  <Country country={country} />
                 </Link>
               );
             })

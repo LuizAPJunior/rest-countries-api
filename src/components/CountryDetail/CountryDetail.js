@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import useCountries from '../../hooks/useCountries';
 
 import './CountryDetail.css';
@@ -17,6 +17,10 @@ const CountryDetail = () => {
   const countryCurrencies = (currencies) => {
     const currenciesObj = Object.entries(currencies);
     return currenciesObj.map((currency) => currency[1]['name']).join(', ');
+  };
+
+  const borderCountryLink = (borderCountry) => {
+    navigate(`/${borderCountry}`);
   };
 
   return (
@@ -72,17 +76,20 @@ const CountryDetail = () => {
                 </div>
               </div>
               {country.borders ? (
-                <div className="borderCountries-list">
-                  <span>Border Countries:</span>
-                  {country.borders.map((country) => (
-                    <Link
-                      key={country}
-                      to={`../${borderCountry(country)}`}
-                      className="countries-link"
-                    >
-                      <button className="borderCountry-button">{borderCountry(country)}</button>
-                    </Link>
-                  ))}
+                <div className="borderCountries-container">
+                  <p id="borderCountries-header">Border Countries:</p>
+                  <div className="borderCountries-list">
+                    {country.borders.map((country) => (
+                      <button
+                        key={country}
+                        type="button"
+                        onClick={() => borderCountryLink(borderCountry(country))}
+                        className="borderCountry-button"
+                      >
+                        {borderCountry(country)}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 ''

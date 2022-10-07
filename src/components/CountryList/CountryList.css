@@ -12,8 +12,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 80px;
+    gap: 16px;
+
     padding: 3rem 5rem;
 }
 
@@ -36,7 +36,7 @@ a {
     }
 
     .countries-filter {
-        display: block;
-        padding-inline: 2rem;
+        flex-direction: column;
+        padding-inline: 1rem;
     }
 }

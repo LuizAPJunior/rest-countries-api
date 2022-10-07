@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useCountries from '../../hooks/useCountries';
-
 import './CountryDetail.css';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const CountryDetail = () => {
   const name = useParams().id;
   const countries = useCountries();
   const country = countries ? countries.find((country) => country.name.common === name) : '';
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeContext);
 
   const borderCountry = (borderCountryInitials) => {
     return countries.find((country) => borderCountryInitials === country.cca3).name.common;
@@ -27,7 +28,20 @@ const CountryDetail = () => {
     <div>
       {country ? (
         <div className="countryDetail">
-          <button className="back-button" onClick={() => navigate(-1)}>
+          <button
+            className="back-button"
+            onClick={() => navigate(-1)}
+            style={{ backgroundColor: theme.elements, color: theme.text }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill={theme.text}
+              viewBox=" 0 0 48 48"
+              height="20"
+              width="16"
+            >
+              <path d="M24 40 8 24 24 8l2.1 2.1-12.4 12.4H40v3H13.7l12.4 12.4Z" />
+            </svg>
             Back
           </button>
           <div className="countryDetail-container">
@@ -85,6 +99,7 @@ const CountryDetail = () => {
                         type="button"
                         onClick={() => borderCountryLink(borderCountry(country))}
                         className="borderCountry-button"
+                        style={{ backgroundColor: theme.elements, color: theme.text }}
                       >
                         {borderCountry(country)}
                       </button>

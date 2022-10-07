@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './CountryList.css';
 import Country from '../Country/Country';
-import { Link } from 'react-router-dom';
 import useCountries from '../../hooks/useCountries';
 import useFilter from '../../hooks/useFilter';
 import FilterCountry from '../FilterCountry/FilterCountry';
 import FilterRegion from '../FilterRegion/FilterRegion';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const CountryList = () => {
   const [region, setRegion] = useState('');
   const [searchCountry, setSearchCountry] = useState('');
   const allCountries = useCountries();
-
   const countries = allCountries ? useFilter(allCountries, region, searchCountry) : '';
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className="countries">
       <div className="countries-filter">
@@ -23,13 +24,11 @@ const CountryList = () => {
         {countries
           ? countries.map((country) => {
               return (
-                <Link
-                  className="countries-link"
+                <Country
                   key={country.name.common}
-                  to={`/${country.name.common}`}
-                >
-                  <Country country={country} />
-                </Link>
+                  style={{ color: theme.text }}
+                  country={country}
+                />
               );
             })
           : ''}

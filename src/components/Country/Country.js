@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './Country.css';
+import { ThemeContext } from '../../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 const Country = ({ country }) => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="country">
+    <div className="country" style={{ backgroundColor: theme.elements, color: theme.text }}>
       <img
         className="country-flag"
         src={country.flags.png}
@@ -22,6 +25,7 @@ const Country = ({ country }) => {
           <span>Capital:</span> {country.capital}
         </div>
       </div>
+      <Link className="countries-link" to={`/${country.name.common}`}></Link>
     </div>
   );
 };

@@ -1,26 +1,70 @@
 .header {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    padding: 2rem 2rem;
-    background: hsl(var(--white));
+    justify-content: space-between;
+    padding: 2.5em 1rem;
     box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
 }
+
+.logo {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+a.country-links::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+}
+
+.darkmode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+
+}
+
+.darkmode:hover {
+    cursor: pointer;
+
+}
+
+.svg-moon {
+    /* border: 1px dashed red; */
+    padding-top: .25em;
+}
+
+.svg-moon svg {
+    width: 16px;
+    height: 16px;
+}
+
 
 @media (min-width: 376px) {
     .header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 16px;
         font-size: 1.5rem;
         font-weight: 800;
         padding: 1.4rem 5rem;
-        background: hsl(var(--white));
         box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
     }
 
     .logo {
-        white-space: nowrap;
+        font-size: 1.5rem;
+    }
+
+    .darkmode {
+        font-size: 1rem;
     }
 
 }

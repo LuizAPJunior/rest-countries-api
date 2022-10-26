@@ -9,12 +9,15 @@ const App = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="App" style={{ backgroundColor: theme.background, color: theme.text }}>
+    <div
+      className="App"
+      style={{ backgroundColor: theme.background, color: theme.text, '*:focus': theme.text }}
+    >
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<CountryList />} />
-          <Route path="/:id" element={<CountryDetail />} />
+          <Route path="/rest-countries-api" element={<CountryList />} />
+          <Route path="/rest-countries-api/:id" element={<CountryDetail />} />
         </Routes>
       </main>
     </div>

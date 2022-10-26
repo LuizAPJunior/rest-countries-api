@@ -8,19 +8,20 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <header className="header" style={{ backgroundColor: theme.elements, color: theme.text }}>
-      <div className="logo">
-        Where in the world?
-        <Link to="/" className="country-links"></Link>
-      </div>
+    <header className="header" style={{ backgroundColor: theme.elements }}>
+      <Link to="/rest-countries-api" className="country-links">
+        <h1 className="logo" style={{ color: theme.text }}>
+          Where in the world?
+        </h1>
+      </Link>
 
-      <div
+      <button
         className="darkmode"
         onClick={() => {
           setDarkMode(!darkMode);
           changeTheme(!darkMode);
         }}
-        style={{ color: theme.text }}
+        style={{ backgroundColor: theme.elements, color: theme.text }}
       >
         <div className="svg-moon">
           <svg
@@ -39,7 +40,7 @@ const Header = () => {
           </svg>
         </div>
         <span>Dark Mode</span>
-      </div>
+      </button>
     </header>
   );
 };

@@ -1,43 +1,4 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5em 1rem;
-    box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
-}
-
-.logo {
-    position: relative;
-    font-size: 1rem;
-    font-weight: 800;
-}
-
-a.country-links::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: '';
-}
-
-.darkmode {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    font-size: .9rem;
-    font-weight: 600;
-
-}
-
-.darkmode:hover {
-    cursor: pointer;
-
-}
-
 .svg-moon {
-    /* border: 1px dashed red; */
     padding-top: .25em;
 }
 
@@ -47,29 +8,79 @@ a.country-links::before {
 }
 
 
-@media (min-width: 376px) {
+.header {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    gap: 16px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.darkmode {
+    font-size: 1rem;
+}
+
+
+.darkmode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 0;
+    box-shadow: none;
+}
+
+
+@media (max-width: 750px) {
     .header {
         display: flex;
+        max-width: 100%;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
         font-size: 1.5rem;
         font-weight: 800;
-        padding: 1.4rem 5rem;
+        padding: 1rem 2rem;
         box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
     }
 
     .logo {
-        font-size: 1.5rem;
-    }
-
-    .darkmode {
         font-size: 1rem;
     }
 
+    .darkmode {
+        font-size: .9rem;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
+    }
+
+    .logo {
+        font-size: 1rem;
+        font-weight: 800;
+    }
 }
 
 
 .countries-link {
-    max-width: min-content;
+    width: fit-content;
+    height: min-content;
 }

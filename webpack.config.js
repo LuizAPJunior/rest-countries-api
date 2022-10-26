@@ -1,5 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-
 
 const config = (env, argv) => {
   console.log('argv ', argv.mode);
@@ -16,6 +16,7 @@ const config = (env, argv) => {
       compress: true,
       port: 3000,
       historyApiFallback: true,
+      hot: true,
     },
     devtool: 'source-map',
     module: {
@@ -33,6 +34,12 @@ const config = (env, argv) => {
         },
       ],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'build/index.html'),
+        favicon: path.join(__dirname, 'src/assets/icons/world.png'),
+      }),
+    ],
   };
 };
 module.exports = config;

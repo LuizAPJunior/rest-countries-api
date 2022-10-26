@@ -1,10 +1,8 @@
 .country {
-    position: relative;
     width: 17rem;
     margin: 0 auto;
     background: hsl(var(--white));
     border-radius: 5px;
-
 }
 
 .country-flag {
@@ -25,13 +23,4 @@
 
 .country-name {
     margin-bottom: 1rem;
-}
-
-a.countries-link::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: '';
 }

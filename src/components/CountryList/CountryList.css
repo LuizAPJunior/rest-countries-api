@@ -18,12 +18,21 @@
 }
 
 .countries-link {
-    max-width: min-content;
+    width: fit-content;
+    height: min-content;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+
+@media(max-width: 750px) {
+    .countries-filter {
+        flex-direction: column;
+        padding-inline: 1rem;
+    }
 }
 
 @media(max-width: 375px) {

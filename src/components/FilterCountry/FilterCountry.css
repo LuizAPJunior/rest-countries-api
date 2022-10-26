@@ -1,7 +1,7 @@
 label {
     display: grid;
     grid-template: 1fr / auto 1fr;
-    max-width: 480px;
+    width: 480px;
     height: 56px;
     gap: 12px;
     border-radius: 3px;
@@ -11,7 +11,7 @@ label {
 }
 
 label:focus-within {
-    outline: 1px solid hsl(var(--focusWithin, --dark-gray));
+    outline: 1px solid hsl(var(--inputFocus, --dark-blue));
 }
 
 
@@ -27,7 +27,15 @@ input[type="search"]::placeholder {
     color: hsl(var(--placeholder, --white));
 }
 
+@media (max-width: 750px) {
+    .search-icon {
+        margin-bottom: 2.5rem;
+    }
 
+    label {
+        width: auto;
+    }
+}
 
 @media (max-width: 375px) {
     .search-icon {

@@ -22,7 +22,7 @@ const FilterRegion = ({ setRegion }) => {
   return (
     <Select
       styles={{
-        control: (styles) => ({
+        control: (styles, { isFocused }) => ({
           ...styles,
           width: 200,
           minHeigth: '56px',
@@ -31,6 +31,7 @@ const FilterRegion = ({ setRegion }) => {
           paddingLeft: '16px',
           fontSize: '14px',
           backgroundColor: theme.elements,
+          outline: isFocused ? `1px solid ${theme.text}` : 'none',
         }),
         indicatorsContainer: (provided) => {
           return {
@@ -59,7 +60,7 @@ const FilterRegion = ({ setRegion }) => {
         input: (styles) => {
           return {
             ...styles,
-            display: 'none',
+            caretColor: 'transparent',
           };
         },
         dropdownIndicator: (styles) => {

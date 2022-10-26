@@ -21,11 +21,11 @@ const CountryDetail = () => {
   };
 
   const borderCountryLink = (borderCountry) => {
-    navigate(`/${borderCountry}`);
+    navigate(`/rest-countries-api/${borderCountry}`);
   };
 
   return (
-    <div>
+    <>
       {country ? (
         <div className="countryDetail">
           <button
@@ -49,7 +49,7 @@ const CountryDetail = () => {
               <img src={country.flags.png} alt={`flag of ${country.name.common}`} />
             </div>
             <div className="countryDetail-info">
-              <h1 className="country-name">{country.name.common}</h1>
+              <h2 className="country-name">{country.name.common}</h2>
               <div className="countryDetail-info-col">
                 <div className="countryDetail-info-item">
                   <p>
@@ -115,7 +115,7 @@ const CountryDetail = () => {
       ) : (
         ''
       )}
-    </div>
+    </>
   );
 };
 

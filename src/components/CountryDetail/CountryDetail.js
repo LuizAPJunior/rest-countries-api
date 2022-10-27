@@ -25,7 +25,7 @@ const CountryDetail = () => {
   };
 
   return (
-    <>
+    <div>
       {country ? (
         <div className="countryDetail">
           <button
@@ -115,7 +115,7 @@ const CountryDetail = () => {
       ) : (
         ''
       )}
-    </>
+    </div>
   );
 };
 

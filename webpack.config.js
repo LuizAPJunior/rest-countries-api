@@ -9,7 +9,7 @@ const config = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'main.js',
-      publicPath: '/build',
+      publicPath: '/',
     },
     devServer: {
       static: path.resolve(__dirname, 'build'),
@@ -37,8 +37,8 @@ const config = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'build/index.html'),
-        favicon: path.join(__dirname, 'src/assets/icons/world.png'),
+        template: path.join(__dirname, '/src/index.html'),
+        favicon: path.join(__dirname, '/src/assets/icons/world.png'),
       }),
     ],
   };

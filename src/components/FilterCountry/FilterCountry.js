@@ -15,13 +15,18 @@ const FilterCountry = ({ setSearchCountry }) => {
   }, [filterCountry.value]);
 
   useEffect(() => {
-    if (theme.input === 'hsl(var(--white))' && location.pathname === '/') {
-      document.querySelector('label').style.setProperty('--inputFocus', '0 0% 100%');
-      document.querySelector('input[type=search]').style.setProperty('--placeholder', '0 0% 100%');
-    }
-    if (theme.input === 'hsl(var(--dark-gray))' && location.pathname === '/') {
-      document.querySelector('label').style.setProperty('--inputFocus', '200 15% 8%');
-      document.querySelector('input[type=search]').style.setProperty('--placeholder', '0 0% 52%');
+    const label = document.querySelector('label');
+    if (label) {
+      if (theme.input === 'hsl(var(--white))' && location.pathname === '/') {
+        document.querySelector('label').style.setProperty('--inputFocus', '0 0% 100%');
+        document
+          .querySelector('input[type=search]')
+          .style.setProperty('--placeholder', '0 0% 100%');
+      }
+      if (theme.input === 'hsl(var(--dark-gray))' && location.pathname === '/') {
+        document.querySelector('label').style.setProperty('--inputFocus', '200 15% 8%');
+        document.querySelector('input[type=search]').style.setProperty('--placeholder', '0 0% 52%');
+      }
     }
   }, [theme.input]);
 

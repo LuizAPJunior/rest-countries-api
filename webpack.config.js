@@ -17,7 +17,7 @@ const config = (env, argv) => {
       port: 3000,
       historyApiFallback: true,
       hot: true,
-      open: '/rest-countries-api',
+      open: true,
     },
     devtool: 'source-map',
     module: {

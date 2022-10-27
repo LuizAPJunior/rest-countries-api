@@ -16,8 +16,8 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/rest-countries-api" element={<CountryList />} />
-          <Route path="/rest-countries-api/:id" element={<CountryDetail />} />
+          <Route path="/" element={<CountryList />} />
+          <Route path="/:id" element={<CountryDetail />} />
         </Routes>
       </main>
     </div>

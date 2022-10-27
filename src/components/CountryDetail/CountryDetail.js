@@ -21,7 +21,7 @@ const CountryDetail = () => {
   };
 
   const borderCountryLink = (borderCountry) => {
-    navigate(`/rest-countries-api/${borderCountry}`);
+    navigate(`/${borderCountry}`);
   };
 
   return (

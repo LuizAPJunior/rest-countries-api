@@ -5,9 +5,7 @@
     "scripts": {
         "build": "webpack --mode=production",
         "start": "webpack serve --mode=development",
-        "lint": "eslint .",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "lint": "eslint ."
     },
     "license": "MIT",
     "devDependencies": {
@@ -19,7 +17,6 @@
         "eslint": "^8.21.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-react": "^7.30.1",
-        "gh-pages": "^4.0.0",
         "html-webpack-plugin": "^5.5.0",
         "prettier": "2.7.1",
         "style-loader": "^3.3.1",
@@ -36,6 +33,5 @@
         "react-router-dom": "^6.3.0",
         "react-select": "^5.4.0",
         "regenerator-runtime": "^0.13.9"
-    },
-    "homepage": "http://luizapjunior.github.io/rest-countries-api"
+    }
 }

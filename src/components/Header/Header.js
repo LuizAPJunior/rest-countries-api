@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="header" style={{ backgroundColor: theme.elements }}>
-      <Link to="/rest-countries-api" className="country-links">
+      <Link to="/" className="country-links">
         <h1 className="logo" style={{ color: theme.text }}>
           Where in the world?
         </h1>

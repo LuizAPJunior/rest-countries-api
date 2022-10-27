@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from './components/ThemeProvider/ThemeProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Router>
+  <Router basename="/rest-countries-api">
     <ThemeProvider>
       <App />
     </ThemeProvider>

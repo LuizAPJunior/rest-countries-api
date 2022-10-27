@@ -9,7 +9,7 @@ const config = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'main.js',
-      publicPath: '/',
+      publicPath: '/build',
     },
     devServer: {
       static: path.resolve(__dirname, 'build'),
@@ -17,6 +17,7 @@ const config = (env, argv) => {
       port: 3000,
       historyApiFallback: true,
       hot: true,
+      open: '/rest-countries-api',
     },
     devtool: 'source-map',
     module: {

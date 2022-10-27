@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Country = ({ country }) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <Link className="countries-link" to={`/rest-countries-api/${country.name.common}`}>
+    <Link className="countries-link" to={`/${country.name.common}`}>
       <div className="country" style={{ backgroundColor: theme.elements, color: theme.text }}>
         <img
           className="country-flag"

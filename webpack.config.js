@@ -37,7 +37,9 @@ const config = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, '/src/index.html'),
+        template: path.join(__dirname, './public/index.html'),
+        filename: 'index.html',
+        inject: 'body',
         favicon: path.join(__dirname, '/src/assets/icons/world.png'),
       }),
     ],

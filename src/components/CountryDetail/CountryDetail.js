@@ -49,7 +49,7 @@ const CountryDetail = () => {
               <img src={country.flags.png} alt={`flag of ${country.name.common}`} />
             </div>
             <div className="countryDetail-info">
-              <h2 className="country-name">{country.name.common}</h2>
+              <h2 className="countryDetail-name">{country.name.common}</h2>
               <div className="countryDetail-info-col">
                 <div className="countryDetail-info-item">
                   <p>

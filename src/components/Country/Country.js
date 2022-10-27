@@ -15,7 +15,7 @@ const Country = ({ country }) => {
           alt={`flag of ${country.name.common}`}
         />
         <div className="country-info">
-          <h3 className="country-name">{country.name.common}</h3>
+          <h2 className="country-name">{country.name.common}</h2>
           <div>
             <span>Population:</span> {country.population.toLocaleString()}
           </div>

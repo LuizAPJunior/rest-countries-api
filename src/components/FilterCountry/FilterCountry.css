@@ -8,6 +8,7 @@ label {
     padding: 12px;
     color: hsl(var(--v-light-gray));
     cursor: text;
+    box-shadow: 0 .5px 3px 1px rgba(0, 0, 0, .09);
 }
 
 label:focus-within {

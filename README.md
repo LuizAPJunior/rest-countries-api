@@ -15,6 +15,7 @@ Essa é uma solução para o app [REST Countries API do Frontend Mentor]((https:
 
 ### O desafio
 
+Users should be able to:
 Usuários devem estar aptos a:
 
 - Vê todos os países da API na página inicial

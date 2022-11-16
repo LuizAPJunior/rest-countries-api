@@ -1,6 +1,6 @@
 # API REST de países
 
-Essa é uma solução para o app [REST Countries API do Frontend Mentor]((https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) em que consome a API rest que contém informação de todos [países](https://restcountries.com/) .
+Essa é uma solução para o app [REST Countries API do Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) em que consome a API rest que contém informação de todos [países](https://restcountries.com/) .
 
 ## Conteúdo
 
@@ -15,7 +15,6 @@ Essa é uma solução para o app [REST Countries API do Frontend Mentor]((https:
 
 ### O desafio
 
-Users should be able to:
 Usuários devem estar aptos a:
 
 - Vê todos os países da API na página inicial
